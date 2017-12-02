@@ -7,7 +7,8 @@ import java.lang.Math;
 	 public static void main (String [] args) {
 	 String [] suits = {"hearts" , "spades", "clubs", "diamonds"};
 	 String [] facevalues = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};	 
-
+	
+	// taking all the suits and facevalues to make 52 cards. 
 	 int n = suits.length*facevalues.length;
 		String [] deck = new String [n];
 		for (int i=0; i<facevalues.length; i++) {
@@ -30,6 +31,7 @@ import java.lang.Math;
 	
 	dealOneCard (n,deck);
 }
+// card shuffling method 
 public static void shuffle(int n, String[] deck) {
 	for (int i = 0;i< n;i++) {
 		int x = i + (int)( Math.random()*(n-i));
@@ -38,6 +40,7 @@ public static void shuffle(int n, String[] deck) {
 		deck [i] = tem;
 		}
 }
+// printing the shuffled card method. 
 public static void dealOneCard ( int n, String [] deck) {
 	if (n<53) {
 		for (int i = 0; i < n;i++) {
